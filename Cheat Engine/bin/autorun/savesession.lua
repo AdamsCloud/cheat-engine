@@ -3,7 +3,7 @@ if getTranslationFolder()~='' then
 end
 
 
-if cheatEngineIs64Bit() then
+if true then
   if string.find(package.cpath, 'clibs64')==nil then
     package.cpath=package.cpath..[[;.\clibs64\?.dll]]
   end
@@ -291,7 +291,7 @@ SaveScanSession.miSaveScanSession.OnClick=saveMemoryScan
 SaveScanSession.miSaveScanSession.Enabled=false
 
 local s=createPicture()
-s.LoadFromFile(getCheatEngineDir()..[[autorun\images\export128x128.png]])
+s.LoadFromFile(getSmithEngineDir()..[[autorun\images\export128x128.png]])
 local ii=MainForm.mfImageList.add(s.Bitmap)
 SaveScanSession.miSaveScanSession.ImageIndex=ii
 s.destroy()
@@ -307,7 +307,7 @@ SaveScanSession.miLoadScanSession.OnClick=loadMemoryScan
 SaveScanSession.miLoadScanSession.Enabled=false
 
 local s=createPicture()
-s.LoadFromFile(getCheatEngineDir()..[[autorun\images\import128x128.png]])
+s.LoadFromFile(getSmithEngineDir()..[[autorun\images\import128x128.png]])
 local ii=MainForm.mfImageList.add(s.Bitmap)
 SaveScanSession.miLoadScanSession.ImageIndex=ii
 s.destroy()

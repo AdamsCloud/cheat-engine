@@ -15,7 +15,7 @@ autosave.getPath=function()
   
     path=os.getenv("LOCALAPPDATA")
     if (path==nil) or (path=='') then
-      path=getCheatEngineDir() --last attempt  
+      path=getSmithEngineDir() --last attempt  
     end
   end
   

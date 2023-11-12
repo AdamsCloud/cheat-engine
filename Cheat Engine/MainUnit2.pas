@@ -1280,9 +1280,26 @@ begin
 
 end;
 
+function GetRandomStr :string;
+const
+  Chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!' ;
+
+var
+    S: string;
+    i, N: integer;
+begin
+  Randomize;
+  S :='';
+  for i :=1 to 30 do begin
+    N :=Random(Length(Chars))+1;
+    S :=S + Chars[N];
+  end;
+    result := S;
+end;
+
 procedure initcetitle;
 begin
-  CEnorm:=cename+BETA;  //.';
+  CEnorm:=GetRandomStr;  //.';
 
 {$ifdef XDEBUG}
   CEnorm:=CENorm+' Debug Build';
