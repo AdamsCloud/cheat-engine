@@ -1,0 +1,31 @@
+﻿  DBKDrvr.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\DBKFunc.h(6,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  DBKFunc.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\DBKFunc.c(3,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  debugger.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\debugger.c(8,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  deepkernel.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\deepkernel.h(1,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  interruptHook.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\interruptHook.c(3,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  IOPLDispatcher.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\DBKfunc.h(6,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  memscan.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\memscan.c(3,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  noexceptions.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\noexceptions.h(7,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  processlist.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\processlist.c(3,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  threads.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\threads.h(5,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  ultimap.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\ultimap.c(8,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  ultimap2.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\ultimap2.c(3,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  apic.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\ultimap2\apic.c(1,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  vmxhelper.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\vmxhelper.c(2,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  vmxoffload.c
+D:\fuzhu\workspace\cheat-engine\DBKKernel\vmxoffload.c(13,10): fatal  error C1083: 无法打开包括文件: “ntifs.h”: No such file or directory
+  正在生成代码...

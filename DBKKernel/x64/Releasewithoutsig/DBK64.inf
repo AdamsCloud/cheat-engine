@@ -1,0 +1,79 @@
+;
+; SmithEngine64.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%ManufacturerName%
+CatalogFile=SmithEngine64.cat
+DriverVer = 11/12/2023,23.34.46.360
+
+[DestinationDirs]
+DefaultDestDir = 12
+SmithEngine64_Device_CoInstaller_CopyFiles = 11
+
+; ================= Class section =====================
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+SmithEngine64.sys  = 1,,
+WdfCoInstaller01009.dll=1 ; make sure the number matches with SourceDisksNames
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64
+
+[Standard.NTamd64]
+%SmithEngine64.DeviceDesc%=SmithEngine64_Device, Root\SmithEngine64 ; TODO: edit hw-id
+
+[SmithEngine64_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+SmithEngine64.sys
+
+;-------------- Service installation
+[SmithEngine64_Device.NT.Services]
+AddService = SmithEngine64,%SPSVCINST_ASSOCSERVICE%, SmithEngine64_Service_Inst
+
+; -------------- SmithEngine64 driver install sections
+[SmithEngine64_Service_Inst]
+DisplayName    = %SmithEngine64.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\SmithEngine64.sys
+
+;
+;--- SmithEngine64_Device Coinstaller installation ------
+;
+
+[SmithEngine64_Device.NT.CoInstallers]
+AddReg=SmithEngine64_Device_CoInstaller_AddReg
+CopyFiles=SmithEngine64_Device_CoInstaller_CopyFiles
+
+[SmithEngine64_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01009.dll,WdfCoInstaller"
+
+[SmithEngine64_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01009.dll
+
+[SmithEngine64_Device.NT.Wdf]
+KmdfService =  SmithEngine64, SmithEngine64_wdfsect
+[SmithEngine64_wdfsect]
+KmdfLibraryVersion = 1.9
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+ManufacturerName="Cheat Engine" ;TODO: Replace with your manufacturer name
+ClassName="System" ; TODO: edit ClassName
+DiskName = "SmithEngine64 Installation Disk"
+SmithEngine64.DeviceDesc = "SmithEngine64 Device"
+SmithEngine64.SVCDESC = "SmithEngine64 Service"
